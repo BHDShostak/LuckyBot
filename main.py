@@ -2,8 +2,9 @@ import telebot
 import random
 from telebot import types
 
+import config
 
-bot = telebot.TeleBot('5219213215:AAH0Du3CjeU1FmCvAfUFtWfuYz5yfjcDnSg')
+bot = telebot.TeleBot(config.token())
 
 @bot.message_handler(commands=['start','help'])
 def start(message):
